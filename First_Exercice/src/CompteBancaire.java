@@ -28,7 +28,7 @@ public class CompteBancaire {
     public static void main(String[] args) {
         CompteBancaire compte1 = new CompteBancaire(1,500.20,"Marc");
         CompteBancaire compte2 = new CompteBancaire(2,800,"Jean");
-        
+
 
         compte1.RetirerSolde(20);
 
