@@ -1,5 +1,4 @@
 public class CompteBancaire {
-
     public int num;
     public double solde;
     public String nom="";
@@ -37,7 +36,5 @@ public class CompteBancaire {
         compte2.DepotSolde(500);
         compte2.affichageCompte();
     }
-
-
 
 }

@@ -1,5 +1,4 @@
 public class CompteEpargne extends CompteBancaire{
-
     public double tauxInteret;
 
     public CompteEpargne(int num, double solde, String nom, double tauxInteret) {
@@ -14,5 +13,4 @@ public class CompteEpargne extends CompteBancaire{
     public static void main(String[] args) {
 
     }
-
 }
