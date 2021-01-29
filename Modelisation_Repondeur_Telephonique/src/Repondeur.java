@@ -10,7 +10,7 @@ public class Repondeur extends Message {
 
     public void AffichageRepondeur() {
             //System.out.println(messageEnregistrer);
-            System.out.println(msgHome);
+            System.out.println(messageEnregistrer);
     }
     public void AffichageMessageAccueil() {
         System.out.println(msgHome);
