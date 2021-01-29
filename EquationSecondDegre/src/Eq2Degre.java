@@ -2,7 +2,7 @@ public class Eq2Degre {
 
     double a, b,c,delta,r1,r2;
 
-    Eq2Degre (double a, double b, double c) {
+    public Eq2Degre (double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -10,25 +10,28 @@ public class Eq2Degre {
 
     //methode caclcul delta
 
-    public void calculDiscriminant() {
-        delta = ((this.b *this.b) - 4 * this.a * this.c);
+    public double calculDiscriminant(double a, double b, double c) {
+        delta = ((b *b) - 4 * a * c);
 
+
+        return delta;
     }
 
-    public void resoudreEquation() {
-        //delta = ((this.b *this.b) - 4 * this.a * this.c);
+    public double resoudreEquation(double delta) {
 
-        r1 = ((-this.b + Math.sqrt(delta)) / 2* this.a);
-        r2 = ((-this.b - Math.sqrt(delta)) / 2* this.a);
 
         if(delta < 0) {
-            System.out.println("Admet pas de solution ");
+            System.out.println("pas de solution :");
         }else if(delta == 0) {
-            System.out.println("admet une solution double ");
-        }else{
+            System.out.println("admet une solution double : ");
+            r1 = (-b/2*a);
+        }else if (delta>0){
             System.out.println("admet deux solution :");
+            r1 = (-b + Math.sqrt(delta)) / (2* this.a);
+            r2 = (-b - Math.sqrt(delta)) / (2* this.a);
         }
 
+    return delta;
     }
 
     public void afficheSolution() {
@@ -45,8 +48,8 @@ public class Eq2Degre {
         equation.b = -4;
         equation.c = 1;
 */
-        equation.calculDiscriminant();
-        equation.resoudreEquation();
+        double sa=equation.calculDiscriminant(equation.a, equation.b, equation.c);
+        equation.resoudreEquation(sa);
         equation.afficheSolution();
 
     }
