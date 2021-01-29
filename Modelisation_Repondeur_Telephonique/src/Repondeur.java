@@ -9,8 +9,11 @@ public class Repondeur extends Message {
     }
 
     public void AffichageRepondeur() {
-            System.out.println(this.messageEnregistrer);
-            System.out.println(this.msgHome);
+            //System.out.println(messageEnregistrer);
+            System.out.println(msgHome);
+    }
+    public void AffichageMessageAccueil() {
+        System.out.println(msgHome);
     }
 
 
@@ -18,12 +21,14 @@ public class Repondeur extends Message {
         //Creation de l'objet repondeur
         Repondeur repondeur1 = new Repondeur("Message du Repondeur","Message d'accueil");
 
+        //Affichage message d'accueil
+        repondeur1.AffichageMessageAccueil();
 
-        //Creation de l'objet message
-        Message message = new Message();
+        //Affichage message repondeur
         repondeur1.AffichageRepondeur();
 
         //Utilisation de la classe Message
+        Message message = new Message();
         message.set("Salut de la classe Message");
         message.get();
         System.out.println(message.get());
